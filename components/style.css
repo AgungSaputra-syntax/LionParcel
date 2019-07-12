@@ -1,0 +1,353 @@
+.container-index {
+    position: relative;
+    width: 768px;
+    height: 480px;
+    border-radius: 10px;
+    margin: 75px auto;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .2),
+                0 10px 10px rgba(0, 0, 0, .2);
+    background: linear-gradient(to bottom, #efefef, #ccc);
+}
+
+.overlay-container-index {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform .5s ease-in-out;
+    z-index: 100;
+}
+
+.overlay-index {
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(to bottom right, red, #e33977);
+    color: #fff;
+    transform: translateX(0);
+    transition: transform .5s ease-in-out;
+}
+
+.overlay-left-index {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 160px 40px;
+    text-align: center;
+    /* transform: translateX($property); */
+    transition: transform .5s ease-in-out;
+    width: 50%;
+    height: 100%;
+}
+
+.overlay-right-index {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 160px 40px;
+    text-align: center;
+    /* transform: translateX($property); */
+    transition: transform .5s ease-in-out;
+    width: 50%;
+    height: 100%;
+    right: 0;
+}
+
+.img-login-index{
+    width: 100%;
+}
+
+.img-regis-index{
+    width: 100%;
+    position: relative;
+    left: 35px;
+}
+
+.judul-index{
+    margin: 0;
+}
+
+.text-index{
+    margin: 20px 0 30px;
+}
+
+a{
+    color: #222;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+.btn-index {
+    margin-top: 5px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background-color: #E02155;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform .1s ease-in;
+}
+
+.btn-index:active {
+    transform: scale(.9);
+}
+
+.btn-index:focus {
+    outline: none;
+}
+
+.btn-index.invert {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.form-index {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 90px 20px;
+    width: calc(50% - 120px);
+    height: calc(100% - 180px);
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    background: linear-gradient(to bottom, #efefef, #ccc);
+    transition: all .5s ease-in-out;
+}
+
+.form-index div {
+    font-size: 1rem;
+}
+
+.form-index input {
+    background-color: #eee;
+    border: none;
+    padding: 8px 15px;
+    margin: 6px 0;
+    width: calc(100% - 30px);
+    border-radius: 15px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .4), 
+                    0 -1px 1px #fff, 
+                    0 1px 0 #fff;
+    overflow: hidden;
+}
+
+.form-index input:focus {
+    outline: none;
+    background-color: #fff;
+}
+
+.sign-in-index {
+    left: 0;
+    z-index: 2;
+}
+
+.sign-up-index {
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.sign-up-active .sign-in-index {
+    transform: translateX(100%);
+}
+
+.sign-up-active .sign-up-index {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show .5s;
+}
+
+.sign-up-active .overlay-container-index {
+    transform: translateX(-100%);
+}
+
+.sign-up-active .overlay-index {
+    transform: translateX(50%);
+}
+
+.sign-up-active .overlay-left-index {
+    transform: translateX(0);
+}
+
+.sign-up-active .overlay-right-index {
+    transform: translateX(20%);
+}
+
+@keyframes show {
+    0% {
+      opacity: 0;
+      z-index: 1;
+    }
+    49% {
+      opacity: 0;
+      z-index: 1;
+    }
+    50% {
+      opacity: 1;
+      z-index: 10;
+    }
+}
+
+.container-crud{
+    /* position: relative;
+    width: 768px;
+    height: 480px; */
+    padding: 50px;
+    border-radius: 10px;
+    margin: 75px auto;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .2),
+                0 10px 10px rgba(0, 0, 0, .2);
+    background-color: #fff;
+}
+
+.bg-crud{
+    background-color: #f1f4f6;
+    height: 100vh;
+}
+
+.judul-crud{
+    color: #E02155;
+    font-weight: bold;
+    padding-bottom: 20px; 
+    border-bottom: 3px solid red;
+}
+
+.btn-add-product{
+    margin-bottom: 20px;
+}
+
+.btn-add-product a{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.label-name{
+    font-size: 25px;
+}
+
+.table-crud thead{
+    font-size: 20px;
+}
+
+a.text-title{
+    text-decoration: none;
+}
+
+.text-title a{
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.text-title a:hover{
+    color: #E02155;
+    font-weight: bolder;
+}
+
+.table-crud tbody td{
+    font-size: 15px;
+}
+
+td .btn-action{
+    position: relative;
+    bottom: 12px;
+    text-decoration: none;
+}
+
+td .btn-action a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+td .btn-action a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-add-cancel{
+    position: relative;
+    bottom: 6px;
+    margin-left: 10px;
+}
+
+.btn-add-cancel a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.btn-add-cancel1{
+    position: relative;
+    bottom: 7px;
+    margin-left: 10px;
+}
+
+.btn-add-cancel1 a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.judul_data{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.desk_data{
+    font-size: 25px;
+}
+
+.isi_desk_data{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.icon_data{
+    font-size: 13px;
+    position: relative;
+    top: 20px;
+    color: #E02155;
+    text-decoration: none;
+}
+
+a.link_data{
+    text-decoration: none;
+}
+
+.link_data a{
+    font-size: 15px;
+    position: relative;
+    top: 20px;
+    color: #E02155;
+    text-decoration: none;
+}
+
+.form-barcode{
+    text-align: right;
+}

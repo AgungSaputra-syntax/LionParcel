@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lion Parcel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login">
+        <article>
+            <div class="container-index" :class="{'sign-up-active' : signUp}">
+                <div class="overlay-container-index">
+                    <div class="overlay-index">
+                    <div class="overlay-left-index">
+                        <img src="../assets/registrasi.png" class="img-regis-index">
+                        <h2 class="judul-index">Welcome Back!</h2>
+                        <p class="text-index">Please login with your personal info</p>
+                        <button class="btn-index invert" id="signIn" @click="signUp = !signUp">Sign In</button>
+                    </div>
+                    <div class="overlay-right-index">
+                        <img src="../assets/login.png" class="img-login-index">
+                        <h2 class="judul-index">Hello, Friend!</h2>
+                        <p class="text-index">Please enter your personal details</p>
+                        <button class="btn-index invert" id="signUp" @click="signUp = !signUp">Sign Up</button>
+                    </div>
+                    </div>
+                </div>
+                <form class="form-index sign-up-index" action="#">
+                    <h2 class="judul-index">Create login</h2>
+                    <div>Use your email for registration</div>
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button id="signUp" @click="signUp = !signUp" class="btn-index">Sign Up</button>
+                </form>
+                <form class="form-index sign-in-index" action="Data.html">
+                    <h2 class="judul-index">Sign In</h2>
+                    <div>Use your account</div>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <a>Forgot your password?</a>
+                    <button type="submit" class="btn-index">Sign In</button>
+                </form>
+            </div>
+        </article>
+    </div>
+
+    <script src="Js/app-login.js"></script>
+</body>
+</html>
